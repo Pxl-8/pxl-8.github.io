@@ -1,0 +1,161 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
+
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    background: #333;
+}
+
+/* Header */
+
+.header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    animation: header-pulsate linear 4s infinite;
+}
+
+.header p {
+    margin: 0;
+    font-size: 50px;
+}
+
+/* Status */
+
+.status {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #fff;
+}
+
+
+
+.status p color {
+    color: lavender;
+}
+
+.status p color.good {
+    color: limegreen;
+}
+
+.status p color.warn {
+    color: orange;
+}
+
+.status p color.err {
+    color: red;
+}
+
+/* Navbar */
+
+.navbar {
+    background: #222;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: 8px;
+    margin-right: 16px;
+}
+
+.navbar ul li:before {
+    content: "";
+    display: block;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background: mistyrose;
+    transition: width .25s;
+}
+
+.navbar ul li:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -13px;
+    top: 10px;
+    height: 6px;
+    width: 6px;
+    background: #fff;
+    opacity: .7;
+}
+
+.navbar ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color .25s;
+}
+
+.navbar ul li:last-child:after {
+    display: none;
+}
+
+.navbar ul li:hover a, .navbar ul li.active a {
+    color: mistyrose;
+}
+
+.navbar ul li:hover:before, .navbar ul li.active:before {
+    width: 100%;
+}
+
+/* Animations */
+
+@keyframes header-pulsate {
+    0% {
+        color: #fff;
+        opacity: 1;
+    }
+    25% {
+        color: mistyrose;
+        opacity: .9;
+    }
+    50% {
+        color: lavender;
+        opacity: .8;
+    }
+    75% {
+        color: lightcyan;
+        opacity: .7;
+    }
+    100% {
+        color: #fff;
+        opacity: 1;
+    }
+}
