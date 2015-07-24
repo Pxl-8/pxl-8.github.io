@@ -1,4 +1,10 @@
 $(document).ready(function() {
+    updateStatus();
+    
+    setInterval(updateStatus, 30000);
+});
+
+function updateStatus() {
     $.getJSON("http://siioh.zapto.org:41010/", function(data) {
         var j = JSON.parse(JSON.stringify(data));
         
@@ -12,9 +18,11 @@ $(document).ready(function() {
             $("#status").removeClass("good err");
             $("#status").addClass("warn");
         }
+        
+        $(".status").slideDown(500);
     }).fail(function() {
         $("#status").html("server down :(");
         $("#status").removeClass("good warn");
         $("#status").addClass("err");
     });
-});
+}
