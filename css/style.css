@@ -48,10 +48,16 @@ html, body {
 
 .status {
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 30px;
     color: #fff;
+}
+
+.status p small {
+    margin-left: 15px;
+    font-size: 16px;
+    color: limegreen;
 }
 
 .status p color {
@@ -68,6 +74,20 @@ html, body {
 
 .status p color.err {
     color: red;
+}
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #fff;
 }
 
 /* Navbar */
