@@ -24,5 +24,6 @@ function updateStatus() {
         $("#status").html("server down :(");
         $("#status").removeClass("good warn");
         $("#status").addClass("err");
+        $(".status").slideDown(500);
     });
 }
