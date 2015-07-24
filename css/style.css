@@ -12,6 +12,7 @@ html, body {
 .page {
     width: 100%;
     height: 100%;
+    background: #333;
 }
 
 /* Universe System */
@@ -19,8 +20,27 @@ html, body {
 .universe {
     width: 100%;
     height: 100%;
-    padding-top: 32px;
     background: #333;
+}
+
+.universe:nth-child(2) {
+    background: rgba(51, 51, 51, .5) url(http://nsa29.casimages.com/img/2012/07/18/120718055736907711.jpg) no-repeat;
+    background-origin: border-box;
+    background-clip: content-box;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* Content */
+
+.content {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(51, 51, 51, .5);
 }
 
 /* Header */
