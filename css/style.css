@@ -34,7 +34,7 @@ html, body {
 /* Content */
 
 .content {
-    width: auto;
+    width: 900px;
     height: auto;
     position: absolute;
     top: 50%;
@@ -220,5 +220,15 @@ html, body {
     100% {
         color: #fff;
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .content {
+        width: auto;
+    }
+    
+    .nav-header {
+        display: none;
     }
 }
