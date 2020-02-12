@@ -1,5 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(//fonts.googleapis.com/css?family=Raleway:400,700);
 
 html, body {
     margin: 0;
@@ -11,7 +11,6 @@ html, body {
 
 .page {
     width: 100%;
-    height: 100%;
     background: #333;
 }
 
@@ -21,10 +20,12 @@ html, body {
     width: 100%;
     height: 100%;
     background: #333;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
 }
 
 .universe:nth-child(2) {
-    background: rgba(51, 51, 51, .5) url(http://nsa29.casimages.com/img/2012/07/18/120718055736907711.jpg) no-repeat;
+    background: rgba(51, 51, 51, .5) url(/assets/background.png) no-repeat;
     background-origin: border-box;
     background-clip: content-box;
     background-size: cover;
@@ -36,21 +37,20 @@ html, body {
 .content {
     width: 900px;
     height: auto;
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(51, 51, 51, .5);
+    padding: 10px;
 }
 
 /* Header */
 
 .header {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 72px;
     margin: 0 0 10px 0;
-    color: #fff;
     text-align: center;
 }
 
@@ -64,7 +64,7 @@ html, body {
     font-size: 50px;
 }
 
-/* Mods */
+/* Mod Links */
 
 .mod-item {
     height: 100px;
@@ -78,6 +78,26 @@ html, body {
 .mod-item.small img {
     height: 100px;
     width: 100px;
+}
+
+/* Mod Blocks */
+
+.mod-list {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 50px;
+}
+
+.mod-list .mod {
+    flex: 1 0 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.mod-list .mod > img {
+    width: 100%;
 }
 
 /* Footer */
@@ -205,6 +225,10 @@ html, body {
 @media screen and (max-width: 900px) {
     .content {
         width: auto;
+    }
+
+    .mod-list {
+        display: block;
     }
 
     .nav-header {
